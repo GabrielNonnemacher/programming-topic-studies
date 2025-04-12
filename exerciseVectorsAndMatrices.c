@@ -3,14 +3,14 @@ float m00, m10, m20, m21, m11, m22;
 
 void exerciseVectorsAndMatrices()
 {
-    int numExercice;
-    int resultScan;
+    int numExercice, resultScan;
 
-    printf("Escolha o exercicio: \n");
-    printf("1 - Exercicio 1: \n");
-    printf("2 - Exercicio 2: \n");
-    printf("3 - Exercicio 3: \n");
-    printf("4 - Exercicio 4: \n");
+    printf("\n--------------- Escolha um exercicio ---------------\n\n");
+    printf("1 - Exercicio 1: vetores e matrizes\n");
+    printf("2 - Exercicio 2: vetores e matrizes\n");
+    printf("3 - Exercicio 3: vetores e matrizes\n");
+    printf("4 - Exercicio 4: vetores e matrizes\n");
+    printf("5 - Sair\n");
 
     resultScan = scanf("%d", &numExercice);
 
@@ -25,25 +25,31 @@ void exerciseVectorsAndMatrices()
     switch (numExercice)
     {
     case 1:
-        exercise1();
+        exerciseVectorsAndMatrices1();
         break;
     case 2:
-        exercise2();
+        exerciseVectorsAndMatrices2();
         break;
     case 3:
-        exercise3();
+        exerciseVectorsAndMatrices3();
+        break;
+    case 4:
+        exerciseVectorsAndMatrices4();
+        break;
+    case 5:
+        printf("\nSaindo do programa...\n\n");
         break;
     default:
-        exercise4();
-        break;
+        printf("\nOpcao invalida! Tente novamente.\n\n");
     }
 }
 
-void exercise1()
+void exerciseVectorsAndMatrices1()
 {
     int vet[10];
 
     printf("Digite 10 numeros inteiros:\n");
+
     for (int i = 0; i < 10; i++)
     {
         printf("Posicao %d: ", i + 1);
@@ -51,13 +57,14 @@ void exercise1()
     }
 
     printf("\nValores triplicados:\n");
+
     for (int i = 0; i < 10; i++)
     {
         printf("%d x 3 = %d\n", vet[i], vet[i] * 3);
     }
 }
 
-void exercise2()
+void exerciseVectorsAndMatrices2()
 {
     int matriz[3][3];
 
@@ -83,9 +90,9 @@ void exercise2()
     }
 }
 
-void exercise3()
+void exerciseVectorsAndMatrices3()
 {
-    printf("Digite 12 números inteiros para preencher a matriz 3x4:\n");
+    printf("Digite 12 numeros inteiros para preencher a matriz 3x4:\n");
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 4; j++)
@@ -160,7 +167,7 @@ void exercise3()
 
     imprimeMatriz();
     esperarTecla();
-    printf("\nDeixando a diagonal principal unitária:");
+    printf("\nDeixando a diagonal principal unitaria:");
 
     m00=1/matriz[0][0];
     m11=1/matriz[1][1];
@@ -176,7 +183,7 @@ void exercise3()
 }
 
 
-void exercise4()
+void exerciseVectorsAndMatrices4()
 {
     int qtdElements;
 
